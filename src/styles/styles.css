@@ -1,0 +1,43 @@
+html,
+.Game {
+    text-align: center;
+    background-color: #3E92CE; ;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+}
+
+html,
+.Winners{
+    text-align: center;
+    background-color: #3E92CE; ;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+}
+
+#Button {
+    background-color: orange;
+}
+
+.App-header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    font-size: calc(10px + 2vmin);
+    color: white;
+    font-family: 'Poppins', sans-serif;
+}
+    
+#Header{
+    font-size: 40px;
+    text-align: center;
+    align-items: center;
+    margin-inline: 350px;
+    padding-left: 250px;
+}

@@ -1,5 +1,9 @@
 # Getting Started with Memory
 
+### `yarn install`
+
+Installs all the dependancies for the project. This must be done before running the project.
+
 ### `yarn start`
 
 Runs the app in the development mode.\
