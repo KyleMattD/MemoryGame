@@ -55,63 +55,85 @@ import joker1 from '../assets/images/Joker_1.svg'
 import joker2 from '../assets/images/Joker_2.svg'
 import cardback from '../assets/images/Card_Back.svg'
 
+export type CardType = {
+  id: string;
+  flipped: boolean;
+  backImage: string;
+  frontImage: string;
+  clickable: boolean;
+  matchingCardId: string;
+};
 
-const cardImages = [
-    {src: two},
-    {src: two1},
-    {src: two2},
-    {src: two3},
-    {src: three},
-    {src: three1},
-    {src: three2},
-    {src: three3},
-    {src: four},
-    {src: four1},
-    {src: four2},
-    {src: four3},
-    {src: five},
-    {src: five1},
-    {src: five2},
-    {src: five3},
-    {src: six},
-    {src: six1},
-    {src: six2},
-    {src: six3},
-    {src: seven},
-    {src: seven1},
-    {src: seven2},
-    {src: seven3},
-    {src: eight},
-    {src: eight1},
-    {src: eight2},
-    {src: eight3},
-    {src: nine},
-    {src: nine1},
-    {src: nine2},
-    {src: nine3},
-    {src: ten},
-    {src: ten1},
-    {src: ten2},
-    {src: ten3},
-    {src: a},
-    {src: a1},
-    {src: a2},
-    {src: a3},
-    {src: j},
-    {src: j1},
-    {src: j2},
-    {src: j3},
-    {src: q},
-    {src: q1},
-    {src: q2},
-    {src: q3},
-    {src: k},
-    {src: k1},
-    {src: k2},
-    {src: k3},
-    {src: joker1},
-    {src: joker2},
-    {src: cardback},
-  ]
+// Put the images in an array
+const cards: string[] = [two, two1, two2, two3, three, three1, three2, three3, four, four1, four2, four3, five, five1, five2, five3, six, six1, six2, six3, seven, seven1, seven2, seven3, eight, eight1, eight2, eight3, nine, nine1, nine2, nine3, ten, ten1, ten2, ten3, a, a1, a2, a3, j, j1, j2, j3, q, q1, q2, q3, k, k1, k2, k3, joker1, joker2];
 
-  export default cardImages;
+export const createBoard = (): CardType[] =>
+  [...cards, ...cards].map((card, i) => ({
+    id: `card${i}`,
+    flipped: false,
+    backImage: cardback,
+    frontImage: card,
+    clickable: true,
+    matchingCardId: i < cards.length ? `card${i + cards.length}` : `card${i - cards.length}`
+  }));
+
+
+// const cardImages = [
+//     {src: two},
+//     {src: two1},
+//     {src: two2},
+//     {src: two3},
+//     {src: three},
+//     {src: three1},
+//     {src: three2},
+//     {src: three3},
+//     {src: four},
+//     {src: four1},
+//     {src: four2},
+//     {src: four3},
+//     {src: five},
+//     {src: five1},
+//     {src: five2},
+//     {src: five3},
+//     {src: six},
+//     {src: six1},
+//     {src: six2},
+//     {src: six3},
+//     {src: seven},
+//     {src: seven1},
+//     {src: seven2},
+//     {src: seven3},
+//     {src: eight},
+//     {src: eight1},
+//     {src: eight2},
+//     {src: eight3},
+//     {src: nine},
+//     {src: nine1},
+//     {src: nine2},
+//     {src: nine3},
+//     {src: ten},
+//     {src: ten1},
+//     {src: ten2},
+//     {src: ten3},
+//     {src: a},
+//     {src: a1},
+//     {src: a2},
+//     {src: a3},
+//     {src: j},
+//     {src: j1},
+//     {src: j2},
+//     {src: j3},
+//     {src: q},
+//     {src: q1},
+//     {src: q2},
+//     {src: q3},
+//     {src: k},
+//     {src: k1},
+//     {src: k2},
+//     {src: k3},
+//     {src: joker1},
+//     {src: joker2},
+//     {src: cardback},
+//   ]
+
+  // export default cardImages;

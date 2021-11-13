@@ -1,20 +1,24 @@
 import * as React from 'react'
 import { Outlet, Link } from "react-router-dom";
 import './App.css';
-import ReactDOM from 'react-dom';
+// Styled components using the MUI library
 import Button from '@mui/material/Button';
 import Box from '@mui/material/Box';
 import TextField from '@mui/material/TextField';
 import Modal from '@mui/material/Modal';
+// Image Imports
 import Ballons from './assets/images/Group 30099.svg';
 import RocketShip from './assets/images/Group 30101.svg';
 
 
 export default function App(this: any) {
+  // Sets the players name
   const [name, setName] = React.useState('');
   const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     setName(event.target.value);
   };
+
+  // Handles the logic for opening the modals
   const [open, setOpen] = React.useState(false);
   const handleOpen = () => setOpen(true);
   const handleClose = () => setOpen(false);
