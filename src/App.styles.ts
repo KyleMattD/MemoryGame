@@ -4,9 +4,9 @@ import SmallRec from './assets/images/Rectangle 2.svg'
 
 export const Grid = styled.div`
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(58px, 1fr));
-  grid-gap: 0.5rem;
-  height: 100vh;
+  grid-template-columns: repeat(auto-fit, minmax(45px, 3fr));
+  grid-gap: 0.75rem;
+  height: 88vh;
   scroll-behaviour: smooth;
 `;
 

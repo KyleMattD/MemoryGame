@@ -8,6 +8,7 @@ html,
     width: 100%;
     overflow: hidden;
     scroll-behavior: smooth;
+    overflow-x : 'auto'
 }
 
 html,
@@ -20,10 +21,12 @@ html,
     width: 100%;
     overflow: hidden;
     scroll-behavior: smooth;
+    overflow-x : 'auto'
 }
 
 #Button {
     background-color: orange;
+    margin-right: 5px;
 }
 
 .App-header {
