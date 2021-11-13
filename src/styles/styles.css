@@ -70,3 +70,15 @@ html,
     margin-top: 50px;
     scroll-behavior: smooth;
   }
+
+  #name{
+    font-family: 'Poppins', sans-serif;
+    font-size: 22px;
+    color: white;
+  }
+
+  #score{
+    font-family: 'Poppins', sans-serif;
+    font-size: 22px;
+    color: white;
+  }

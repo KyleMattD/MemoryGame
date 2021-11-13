@@ -1,4 +1,6 @@
-import styled from "styled-components";
+import styled from 'styled-components';
+import Rectangle from './assets/images/Frame 169.svg'
+import SmallRec from './assets/images/Rectangle 2.svg'
 
 export const Grid = styled.div`
   display: grid;
@@ -20,13 +22,13 @@ export const ContentBox = styled.div`
   }
 `;
 export const Content1 = styled.div`
-  background: './assets/images/Frame 169.svg'
+  background-image: url(${Rectangle});
   padding: 0.25rem;
   width: 30%;
   height: 100%;
 `;
 export const Content2 = styled.div`
-  background: './assets/images/Rectangle 2.svg' 
+  background-image: url(${SmallRec});  
   padding: 0.25rem;
   width: 100%;
   height: 100%;
