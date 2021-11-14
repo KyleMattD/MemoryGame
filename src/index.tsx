@@ -14,8 +14,8 @@ render(
   <Router>
     <Routes>
       <Route path="/" element={<App />} />
-      <Route path="/Games" element={<GameScreen />} />
-      <Route path="/Winner" element={<WinnersScreen />} />
+      <Route path="/Games" element={<GameScreen name name1 />} />
+      <Route path="/Winner" element={<WinnersScreen name name1 points/>} />
     </Routes>
   </Router>,
   rootElement

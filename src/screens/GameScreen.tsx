@@ -14,7 +14,7 @@ import { Grid, ContentBox, Content1, Content2, Content3 } from '../App.styles';
 import Ballons from '../assets/images/Group 30099.svg';
 import RocketShip from '../assets/images/Group 30101.svg';
 
-const GameScreen = (props:any)=> {
+const GameScreen = ({name, name1}:{name:any, name1:any})=> {
 
   function EndGame(){
     window.opener = null;
@@ -94,8 +94,8 @@ const GameScreen = (props:any)=> {
         <ContentBox>
           <Content1>
             <img id="Image" src={Ballons} alt='Balloons'/>
-            <label id='name'>{props.name}</label>
-            <label id='score'>Score: {points}</label>
+            <label id='name'>Name:{name}</label>
+            <label id='score'>Score:{points}</label>
           </Content1>
           <Content2>
             <Grid>
@@ -105,8 +105,8 @@ const GameScreen = (props:any)=> {
             </Grid></Content2>
           <Content3>
             <img id="Image" src={RocketShip} alt='RocketShip'/>
-            <label id='name'>{props.name1}</label>
-            <label id='score'>Score: {points}</label>
+            <label id='name'>Name:{name1}</label>
+            <label id='score'>Score:{points}</label>
           </Content3>
         </ContentBox>
         <Outlet/>

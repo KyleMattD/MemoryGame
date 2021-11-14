@@ -11,7 +11,7 @@ import Ballons from './assets/images/Group 30099.svg';
 import RocketShip from './assets/images/Group 30101.svg';
 
 
-export default function App(this: any) {
+export default function App(props:any) {
   // Sets the players name
   const [name, setName] = React.useState('');
   const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {

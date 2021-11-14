@@ -26,6 +26,8 @@ export const Content1 = styled.div`
   padding: 0.25rem;
   width: 30%;
   height: 100%;
+  display: flex;
+  flex-direction: column;
 `;
 export const Content2 = styled.div`
   background-image: url(${SmallRec});  
