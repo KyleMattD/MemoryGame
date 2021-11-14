@@ -88,6 +88,9 @@ export default function App(this: any) {
           <Link to="/games" style={{ textDecoration: 'none' }}>
             <Button style={{margin:60, height: 60, width:150, fontFamily:'Poppins', fontSize:18, borderRadius:'8px'}} variant="contained" color="success">Let's Play</Button>
           </Link>
+          <Link to="/Winner" style={{textDecoration:'none'}}>
+            <Button variant="contained" id="Button">Test winners screen</Button>
+          </Link>
         </div>
         <Outlet/>
     </div>

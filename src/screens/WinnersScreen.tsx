@@ -1,23 +1,41 @@
 import React from 'react';
 import '../styles/styles.css'
-import ReactDOM from 'react-dom';
+// Routing
+import { Outlet, Link } from "react-router-dom";
+// Button styling
 import Button from '@mui/material/Button';
+// Image imports
+import Winner from '../assets/images/Group 30120.svg'
+import Ballons from '../assets/images/Group 30099.svg';
+import RocketShip from '../assets/images/Group 30101.svg';
+import trophy from '../assets/images/Icon.svg'
 
-function WinnersScreen() {
+const WinnersScreen = (props:any)=> {
   
   return (
     <div className="Winners">
       <div id="Celebration">
-        <label>Well Done!</label>
-        <label>{}</label>
+        <label id="Win">Well Done!</label>
+        <label id="playername">{props.name}</label>
       </div>
+      <img src={Winner} alt="Winner"/>
+      <div id="first"><img src={trophy} alt="trophy"/></div>
       <div id="player1">
-        <label></label>
+        <img id="winnerimage" src={Ballons} alt="balloons"/>
+        <label id="spacing">1st Place</label>
+        <label id="spacing">Player: {props.name}</label>
+        <label id="spacing">Score: {props.points}</label>
       </div>
       <div id="player2">
-        <label></label>
+        <img id="secondplaceimage" src={RocketShip} alt="ship"/>
+        <label id="spacing2">2nd Place</label>
+        <label id="spacing2">Player: {props.name1}</label>
+        <label id="spacing2">Score: {props.points}</label>
       </div>
-      <button>Play Again</button>
+      <Link to="/" style={{textDecoration:'none'}}>
+        <Button variant="contained" id="play">Play Again</Button>
+      </Link>
+      <Outlet/>
     </div>
   );
 }

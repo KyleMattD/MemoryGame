@@ -47,7 +47,7 @@ html,
     padding-left: 250px;
 }
 
-#P1{
+  #P1{
     display: flex-start;
     align-items: center;
     justify-content: center;
@@ -84,4 +84,84 @@ html,
     font-family: 'Poppins', sans-serif;
     font-size: 22px;
     color: white;
+  }
+
+  #Win{
+    color: white;
+    font-family: 'Poppins', sans-serif;
+    font-size: 32px;
+  }
+
+  #playername{
+    color: white;
+    font-family: 'Poppins', sans-serif;
+    font-size: 48px;
+  }
+
+  #play{
+    background-color: #A7DAFF;
+    color: black;
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+    font-weight: 100;
+  }
+
+  #player1{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    flex-direction: row;
+    border: 1px solid gold;
+    background-color: gold;
+    border-radius: 8px;
+    width: 500px;
+    height: 80px;
+    margin-left: 465px;
+    font-family: 'Poppins', sans-serif;
+    color:#0D4477;
+  }
+
+  #player2{
+    display: flex;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-family: 'Poppins', sans-serif;
+    color:#0D4477;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    flex-direction: row;
+    border: 1px solid white;
+    background-color: white;
+    border-radius: 8px;
+    width: 500px;
+    height: 80px;
+    margin-left: 465px;
+  }
+
+  #spacing{
+    padding:10px;
+  }
+
+  #spacing2{
+    padding:10px;
+  }
+
+  #winnerimage{
+    height: 50px;
+    width: 53px;
+    align-self: center;
+    padding-right: 70px;
+  }
+
+  #secondplaceimage{
+    height: 50px;
+    width: 53px;
+    align-self: center;
+    padding-right: 70px;
+  }
+
+  #first{
+   justify-content: flex-start;
   }

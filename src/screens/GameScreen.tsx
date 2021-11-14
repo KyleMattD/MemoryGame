@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useEffect, useState} from 'react';
 import { Outlet, Link } from "react-router-dom";
 import '../styles/styles.css'
 import Button from '@mui/material/Button';
@@ -22,18 +22,19 @@ const GameScreen = (props:any)=> {
     window.close();
   }
 
-  const [cards, setCards] = React.useState<CardType[]>(shuffleArray(createBoard()));
-  const [gameWon, setGameWon] = React.useState(false);
-  const [matchedPairs, setMatchedPairs] = React.useState(0);
-  const [clickedCard, setClickedCard] = React.useState<undefined | CardType>(undefined);
-  const [points, setPoints] = React.useState(0)
+  const [cards, setCards] = useState<CardType[]>(shuffleArray(createBoard()));
+  const [gameWon, setGameWon] = useState(false);
+  const [matchedPairs, setMatchedPairs] = useState(0);
+  const [clickedCard, setClickedCard] = useState<undefined | CardType>(undefined);
+  const [points, setPoints] = useState(0)
 
-  React.useEffect(() => {
+  useEffect(() => {
     if (matchedPairs === cards.length / 2) {
       console.log('Game Won!');
       setGameWon(true);
+      <Link to="/Winner"></Link>
     }
-  }, [matchedPairs]);
+  }, [cards.length, matchedPairs]);
 
   const handleCardClick = (currentClickedCard: CardType) => {
     // Flip the card
@@ -72,13 +73,21 @@ const GameScreen = (props:any)=> {
 
     setClickedCard(undefined);
   };
+
+  function startOver() {        
+    setGameWon(false)
+    setCards([])        
+    setClickedCard(undefined)        
+    setPoints(0)        
+    setMatchedPairs(0)    
+}
   
   return (
     <div className="Game">
         <div className="App-header">
           <label id="Header">Memory</label>
           <Link to="/" style={{textDecoration:'none'}}>
-            <Button variant="contained" id="Button">Restart Game</Button>
+            <Button variant="contained" id="Button" onClick={startOver}>Restart Game</Button>
           </Link>
           <Button variant="contained" color="error" onClick={EndGame}>Exit Game</Button>
         </div>
